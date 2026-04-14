@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="products">
+</body>
+
+<header>
+    <h1>Products</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+
+<div class="grid">
+
+    <!-- Handbag -->
+<div class="card">
+    <span class="badge">New</span>
+    <img src="images/handbag.jpg">
+    <h3>Handbag</h3>
+    <p>₹2999</p>
+    <button onclick="addToCart('Handbag', 2999)">Add to Cart</button>
+    <button onclick="showDetails('Handbag', 2999, 'images/handbag.jpg', 'Elegant handbag for daily and party use')">
+        View Details
+    </button>
+</div>
+
+<!-- Sunglasses -->
+<div class="card">
+    <span class="badge">Trending</span>
+    <img src="images/sunglasses.jfif">
+    <h3>Sunglasses</h3>
+    <p>₹999</p>
+    <button onclick="addToCart('Sunglasses', 999)">Add to Cart</button>
+    <button onclick="showDetails('Sunglasses', 999, 'images/sunglasses.jfif', 'Stylish sunglasses with UV protection')">
+        View Details
+    </button>
+</div>
+
+<!-- Perfume -->
+<div class="card">
+    <span class="badge">Trending</span>
+    <img src="images/perfume.jpg">
+    <h3>Perfume</h3>
+    <p>₹1999</p>
+    <button onclick="addToCart('Perfume', 1999)">Add to Cart</button>
+    <button onclick="showDetails('Perfume', 1999, 'images/perfume.jpg', 'Long-lasting fragrance for all occasions')">
+        View Details
+    </button>
+</div>
+
+    <div class="card">
+        <span class="badge">Best Seller</span>
+        <img src="images/earrings-necklace.jpg">
+        <h3>Earrings And Necklace</h3>
+        <p>₹2499</p>
+        <button onclick="addToCart('Earrings and Necklace', 2499)">Add to Cart</button>
+        <button onclick="showDetails('Earrings and Necklace', 2499, 'images/earrings-necklace.jpg', 'Elegant earrings and necklace combo for special occasions')">
+    View Details
+</button>
+    </div>
+
+    <div class="card">
+        <span class="badge">Best Seller</span>
+        <img src="images/watch.jfif">
+        <h3>Watch</h3>
+        <p>₹4999</p>
+        <button onclick="addToCart('Watch', 4999)">Add to Cart</button>
+        <button onclick="showDetails('Watch', 4999, 'images/watch.jfif', 'Stylish watch with modern design and long battery life')">
+    View Details
+</button>
+    </div>
+
+    <div class="card">
+        <span class="badge">Best Seller</span>
+        <img src="images/shoes.jfif">
+        <h3>Shoes</h3>
+        <p>₹5499</p>
+<button onclick="addToCart('Shoes', 5499)">Add to Cart</button> 
+<button onclick="showDetails('Shoes', 5499, 'images/shoes.jfif', 'Comfortable and trendy shoes for everyday use')">
+    View Details
+</button>
+
+</div>
+
+<h2>Cart</h2>
+<ul id="cart"></ul>
+<h3 id="total">Total: ₹0</h3>
+<button onclick="buyNow()">Buy Now</button>
+
+<script src="script.js"></script>
+
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span onclick="closeModal()" class="close">&times;</span>
+        <img id="modalImg">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDesc"></p>
+        <h3 id="modalPrice"></h3>
+    </div>
+</div>
+
+</body>
+</html>
